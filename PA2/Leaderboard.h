@@ -4,6 +4,10 @@
 #include <ctime>
 #include <string>
 #include "LeaderboardEntry.h"
+#include <fstream>
+#include <vector>
+#include <sstream>
+#include <iostream>
 
 #define MAX_LEADERBOARD_SIZE 10
 
@@ -16,7 +20,10 @@ public:
     void write_to_file(const string &filename);
     void print_leaderboard();
     void insert_new_entry(LeaderboardEntry *new_entry);
+    void top_ten();
+    string convert_time_format(time_t &timestamp);
     virtual ~Leaderboard();
+    
 };
 
 
